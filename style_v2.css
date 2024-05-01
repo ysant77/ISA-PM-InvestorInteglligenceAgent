@@ -1,0 +1,37 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header, .stButton>button {
+    background-color: #1a936f;  /* Rich green */
+    color: white;
+}
+
+.stTextInput>div>div>input {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.stDateInput>div>div>input {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.stTabs>button {
+    background-color: #a8df65;  /* Light green */
+    border: none;
+}
+
+.stTabs>button:focus {
+    border: none;
+    outline: none;
+}
+
+.stTabContent {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}

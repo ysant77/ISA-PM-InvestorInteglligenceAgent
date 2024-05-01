@@ -1,0 +1,222 @@
+/* General reset for padding and margin to avoid inconsistencies */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main content styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    color: #343a40;
+    margin-bottom: 0.5em;
+}
+
+/* Main header at the top of the page */
+header {
+    background-color: #ffffff;
+    border-bottom: 2px solid #dee2e6;
+    padding: 1em 0;
+    margin-bottom: 2em;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.75em 1em;
+    border-bottom: 1px solid #dee2e6;
+}
+
+th {
+    background-color: #e9ecef;
+}
+
+/* Buttons */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0.25em;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+}
+
+button:hover {
+    background-color: #033c79;
+}
+
+/* Streamlit-specific selectors */
+/* Adjust this section as per the class names you see in the HTML using developer tools in the browser */
+.stTextInput > label, .stSelectbox > label, .stDateInput > label {
+    font-weight: bold;
+}
+
+.stMarkdown {
+    line-height: 1.5;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .stButton > button {
+        width: 100%;
+    }
+}
+/* Input fields */
+.stTextInput input, .stSelectbox select, .stDateInput input {
+    border: 2px solid #ced4da;
+    border-radius: .25rem;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Button styling */
+.stButton > button {
+    background-color: #002c6d;
+    color: white;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    border: none;
+    transition: background-color .15s ease-in-out;
+}
+
+.stButton > button:hover {
+    background-color: #022a66;
+}
+
+/* Input labels */
+.stTextInput label, .stSelectbox label, .stDateInput label {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 500;
+}
+
+/* Layout adjustments */
+.stTextInput, .stSelectbox, .stDateInput {
+    margin-bottom: 1rem;
+}
+
+/* Hover effect for inputs */
+.stTextInput input:hover, .stSelectbox select:hover, .stDateInput input:hover {
+    border-color: #adb5bd;
+}
+
+/* Focus effect for inputs */
+.stTextInput input:focus, .stSelectbox select:focus, .stDateInput input:focus {
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+    border-color: #86b7fe;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .stTextInput input, .stSelectbox select, .stDateInput input,
+    .stButton > button {
+        width: 100%;
+        display: block;
+    }
+}
+
+/* General styles */
+body, .stApp {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Responsive tabs */
+  div.stTabs > div > ul {
+    display: flex;
+    justify-content: start;
+    list-style-type: none;
+    padding-left: 0; /* Remove default padding */
+    margin: 1rem 0; /* Add some space above and below the tab bar */
+    overflow-x: auto; /* Enables horizontal scrolling for small screens */
+  }
+  
+  div.stTabs > div > ul > li {
+    margin-right: 0.5rem; /* Space between tabs */
+  }
+  
+  div.stTabs > div > ul > li > a {
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 1rem;
+    background-color: #eee;
+    color: #333;
+    border-radius: 0.5rem 0.5rem 0 0;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  div.stTabs > div > ul > li > a:hover,
+  div.stTabs > div > ul > li > a:active,
+  div.stTabs > div > ul > li[aria-selected="true"] > a {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Responsive design adjustments */
+  @media only screen and (max-width: 768px) {
+    div.stTabs > div > ul > li > a {
+      padding: 0.5rem; /* Smaller padding on small screens */
+    }
+  
+    div.stTabs > div > ul > li {
+      margin-right: 0.25rem; /* Less space between tabs on small screens */
+    }
+  }
+  
+
+
+/* Adding custom styles for the tabs for interactivity */
+div.stTabs > div > ul > li > button {
+    padding: 10px 20px;
+    margin-right: 5px;
+    border: none;
+    border-bottom: 3px solid transparent; /* Invisible border to prevent layout shift on active */
+    background-color: transparent;
+    color: #0c59cf;
+    font-weight: bold;
+    transition: all .3s ease;
+}
+
+div.stTabs > div > ul > li > button:hover {
+    border-bottom: 3px solid #0c59cf;
+    background-color: #f1f1f1;
+}
+
+/* Active tab styling */
+div.stTabs > div > ul > li > button[data-baseweb="tab"] {
+    border-bottom: 3px solid #0c59cf;
+    color: #333;
+}
+
+/* Creating separation and scrollability in columns */
+div.stTabs > div > div {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Space between columns */
+}
+
+/* Individual scrollable columns */
+.stTabContent > div {
+    max-height: 800px; /* Set a max height for scrollable content */
+    overflow-y: auto; /* Add vertical scrollbar if content is taller */
+}
+

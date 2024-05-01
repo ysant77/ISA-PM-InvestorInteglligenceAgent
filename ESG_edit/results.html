@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ESG Analysis Results for {{ company_name }}</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .score-table {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>ESG Analysis Results for {{ company_name }}</h1>
+    <h2>Individual Scores</h2>
+    <table class="score-table">
+        <tr>
+            <th>Aspect</th>
+            <th>Score</th>
+        </tr>
+        <tr>
+            <td>Environmental</td>
+            <td>{{ environmental_score }}</td>
+        </tr>
+        <tr>
+            <td>Social</td>
+            <td>{{ social_score }}</td>
+        </tr>
+        <tr>
+            <td>Governance</td>
+            <td>{{ governance_score }}</td>
+        </tr>
+    </table>
+
+    <h2>Overall ESG Scores (Different Approaches)</h2>
+    <table class="score-table">
+        <tr>
+            <th>Approach</th>
+            <th>Score</th>
+        </tr>
+        {% for approach, score in overall_scores.items() %}
+        <tr>
+            <td>{{ approach }}</td>
+            <td>{{ score }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
