@@ -426,14 +426,15 @@ def display_webpage(buf, company_info, stock_data, company_news_df, company_sent
         # Starts here.
         # uploaded_file = st.file_uploader(label='Upload File', type='pdf')
         question = st.chat_input(placeholder="Type here")
+        # bot_response = gemma_respond(question)
         if question:
             message_id = len(st.session_state.chat_history)
             st.session_state.chat_history.append({
                 "question": question,
                 "answer": f"{question}_Answer",
-                # "answer": st.write_stream(response_generator())
+                # "answer": bot_response,
                 "message_id": message_id,
-            })
+                })
             for entry in st.session_state.chat_history:
                 with st.chat_message("human"):
                     # st.write(question)

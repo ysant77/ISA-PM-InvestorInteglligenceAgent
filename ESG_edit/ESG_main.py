@@ -36,8 +36,8 @@ def esg_main(company_name, esg_file_name):
     social_analyzer = SocialAnalyzer()
     governance_analyzer = GovernanceAnalyzer()
     e_output_arr = env_analyzer.analyze(article_title_arr)
-    s_output_arr = social_analyzer.analyze(article_title_arr)['score']
-    g_output_arr = governance_analyzer.analyze(article_title_arr)['score']
+    s_output_arr = social_analyzer.analyze(article_title_arr)
+    g_output_arr = governance_analyzer.analyze(article_title_arr)
 
 
     environmental_score_arr = [output['score'] for output in e_output_arr]
