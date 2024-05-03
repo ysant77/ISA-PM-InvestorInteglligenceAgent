@@ -52,6 +52,3 @@ The `main.py` in the Frontend directory serves as both the main script and the w
 - **Gemma Model**: Check out the Gemma model [here](https://huggingface.co/yatharth97/yatharth-gemma-2b-it-isa-v2).
 - **Dataset**: The dataset used to fine-tune the Gemma model is available [here](https://huggingface.co/datasets/yatharth97/isa_gemma).
 
-## Notes
-
-This README provides guidance for setting up and running the SystemCode project. Ensure that your system meets the mentioned requirements to avoid any runtime issues.
