@@ -13,12 +13,19 @@ SystemCode/
 │   ├── Cover.jpg
 │
 ├── Backend/
-    ├── .Neuro_Fuzzy/
-    ├── .ESG/
-    ├── Company_Scrapping.py
-    ├── GD_SentimentAnalysis.py
-    ├── .history/
-    ├── constant_api_key.py
+│   ├── .Neuro_Fuzzy/
+│   ├── .ESG/
+│   ├── Company_Scrapping.py
+│   ├── GD_SentimentAnalysis.py
+│   ├── .history/
+│   ├── constant_api_key.py
+│
+└── Model_training/
+    ├── Clustering.ipynb
+    ├── generate_training_data_gemma.ipynb
+    ├── neuro_fuzzy.ipynb
+    ├── fine_tune_gemma.ipynb
+
 ```
 
 ## Brief Description
